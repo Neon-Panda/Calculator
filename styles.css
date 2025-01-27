@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+    background-color: rgb(99, 99, 99);
+}
+
+.container {
+    box-sizing: border-box;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border: rgb(34, 33, 33) solid 20px;
+    border-radius: 30px;
+    height: 700px;
+    width: 500px;
+    background-color: rgb(34, 33, 33);
+}
+
+.display {
+    display: flex;
+    flex: 1 1 auto;
+    height: 120px;
+    border: rgb(126, 125, 125) solid 3px;
+    background-color: rgb(165, 165, 165);
+    border-radius: 20px;
+}
+
+.delete {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+    padding-right: 10px;
+    gap: 10px;
+}
+
+.delete button {
+    margin: 0px;
+    padding: 0px;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+}
+
+.delete .clear {
+    background-color: #FFA500;
+    font-size: 20px;
+}
+
+.delete .backspace {
+    background-color: #FF474D;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.numpad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    row-gap: 10px;
+    flex: 1 1 auto;
+}
+
+.numpad button {
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    height: 90px;
+    width: 100px;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+}
