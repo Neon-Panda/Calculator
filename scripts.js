@@ -20,6 +20,19 @@ const operate = (num2, operator, num1) => {
     }
 }
 
+const limitSumSize = (sum) => {
+    if (sum.toString().length > 9) {
+        scientific = sum.toExponential()
+        return sum.toPrecision(4);
+    } else {
+        return sum}
+}
+
+const clearDisplay = () => {
+    num1 = "", num2 = "", operator = "", sum = "";
+    display.textContent = ""
+}
+
 let display = document.querySelector(".display");
 
 let container = document.querySelectorAll("button");
@@ -32,7 +45,7 @@ container.forEach((button) => {
             if (num2) {
                 sum = operate(num1, operator, num2)
                 num1 = sum
-                display.textContent = sum
+                display.textContent = limitSumSize(sum)
             } else {
             operator = button.textContent
             display.textContent = operator
@@ -40,8 +53,7 @@ container.forEach((button) => {
             num2 = num1
             num1 = ""
         } else if (button.className === "clear") {
-            num1 = "", num2 = "", operator = "", sum = "";
-            display.textContent = ""
+            clearDisplay()
         } else if (button.className === "backspace") {
             let array
             if (sum) {
@@ -49,7 +61,7 @@ container.forEach((button) => {
                 array = sumString.split("");
                 array.pop()
                 sum = array.join("")
-                display.textContent = sum;
+                display.textContent = limitSumSize(sum);
             } else {
                 array = num1.split("");
                 array.pop()
