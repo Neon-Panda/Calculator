@@ -24,11 +24,15 @@ body {
 
 .display {
     display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     flex: 1 1 auto;
     height: 120px;
     border: rgb(126, 125, 125) solid 3px;
     background-color: rgb(165, 165, 165);
     border-radius: 20px;
+    font-size: 100px;
+    text-align: right;
 }
 
 .delete {
